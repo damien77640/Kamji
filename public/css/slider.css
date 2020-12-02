@@ -1,0 +1,260 @@
+/*
+    DEMO STYLE
+*/
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    perspective: 1500px;
+}
+
+
+#sidebar {
+    min-width: 127px;
+    max-width: 127px;
+    background: #C4C4C4;
+    color: #fff;
+    transition: all 0.6s;
+    transform-origin: bottom left;
+}
+
+#sidebar.active {
+    margin-left: -127px;
+}
+
+#sidebar .sidebar-header {
+    padding: 22.5px;
+    background: #8F8F8F;
+}
+
+#sidebar ul p {
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: inherit;
+}
+
+#sidebar ul li a:hover {
+    border: 16px solid rgba(0, 0, 0, 0.26);
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #8F8F8F;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.article, a.article:hover {
+    background: #8F8F8F !important;
+    color: #fff !important;
+}
+
+.btn-slider, .btn-slider:hover, .btn-slider:focus .aslide {
+    color: rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: all 0.3s;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1em;
+    border: 0;
+    padding: 10px;
+    border-radius: 0;
+    height: 127px;
+}
+
+#sidebar ul li form .btn-slider:hover {
+    border: 16px solid rgba(0, 0, 0, 0.26);
+}
+
+
+.aslide {
+    width: 127px;
+    height: 127px;
+}
+
+.center-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.icon-side {
+    font-size: 65px;
+}
+
+.a-icon {
+    width: 127px;
+    height: 127px;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+#sidebarCollapse span {
+    width: 80%;
+    height: 3px;
+    margin: 0 auto;
+    display: block;
+    background: #555;
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+    transition-delay: 0.2s;
+}
+
+#sidebarCollapse span:first-of-type {
+    transform: rotate(45deg) translate(3px, 3px);
+}
+
+#sidebarCollapse span:nth-of-type(2) {
+    opacity: 0;
+}
+
+#sidebarCollapse span:last-of-type {
+    transform: rotate(-45deg) translate(1px, -1px);
+}
+
+
+#sidebarCollapse.active span {
+    transform: none;
+    opacity: 1;
+    margin: 5px auto;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar.active {
+        margin-left: -85px;
+        transform: none;
+    }
+
+    #sidebar {
+        min-width: 85px;
+        max-width: 85px;
+    }
+
+    .btn-slider, .btn-slider:hover, .btn-slider:focus .aslide {
+        height: 85px;
+    }
+
+    .aslide {
+        width: 85px;
+        height: 85px;
+    }
+
+    .a-icon {
+        width: 85px;
+        height: 85px;
+    }
+
+    .icon-side {
+        font-size: 34px;
+    }
+    .svg-inline--fa.fa-w-16 {
+        width: 32px;
+    }
+    .svg-inline--fa {
+        height:32px;
+    }
+    .svg-inline--fa.fa-w-18 {
+        width: 32px;
+    }
+
+    #sidebar {
+        margin-left: 0;
+    }
+}

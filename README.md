@@ -30,3 +30,8 @@ on peut créer des évènements.
 - [Bootstrap](https://getbootstrap.com/) `v4.4.1` 
 - [FontAwesome](https://fontawesome.com/) `v5.11.2` 
 - [Fullcalendar](https://github.com/fullcalendar/fullcalendar) `v4.3.1` 
+
+### Todo
+* supprimer les librairie du code pour utiliser npm
+* check que le code fonctionne
+* Faire un Readme plus propre
